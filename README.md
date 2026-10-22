@@ -1,5 +1,7 @@
 # 撅一下 · 纯前端双人 QQ 表情 H5
 
+[在线使用](https://jue-yichen11818.netlify.app) · [GitHub 仓库](https://github.com/yichen11818/jue-h5)
+
 输入两个 QQ 号，或上传两个头像，在浏览器本地生成并下载三帧循环 GIF。支持交换双方、手机长按保存、错误提示。无需服务端、数据库、登录或 API Key。
 
 ## 本地开发
@@ -11,6 +13,10 @@ npm run build
 ```
 
 Netlify 构建命令 `npm run build`，发布目录 `dist`。配置见 `netlify.toml`。
+
+当前通过 Netlify CLI 发布。更新源码后执行 `npm run build` 和 `npx netlify-cli deploy --prod --dir dist --no-build`；新电脑需先 `npx netlify-cli login`，再 `npx netlify-cli link --id da7ac9fe-89c3-4130-923e-26ad9d2e4814`。GitHub push 尚未绑定自动部署。
+
+已验证生产构建、真实 QQ 头像生成、空号码校验、390px 手机布局及 GIF 解码：3 帧、300×300、每帧 50ms。
 
 ## 来源与实现
 
